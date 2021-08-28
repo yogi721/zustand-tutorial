@@ -1,4 +1,5 @@
 import People from "./components/People";
+import Todo from "./components/Todo";
 
 
 function App() {
@@ -6,6 +7,8 @@ function App() {
     <div className="App">
       Hello World!
       <People />
+      <hr />
+      <Todo />
     </div>
   );
 }

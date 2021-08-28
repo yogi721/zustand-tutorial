@@ -1,7 +1,7 @@
 import create from "zustand";
-import { devtools } from "zustand/middleware"
+import { devtools, persist } from "zustand/middleware"
 
-const store = (set) => ({
+let store = (set) => ({
     people: ['John Doe', 'Jane Doe'],
     addPerson: (person) =>
         set((state) => ({ people: [...state.people, person] })),
@@ -11,6 +11,9 @@ const store = (set) => ({
         set((state) => ({ todos: [...state.todos, todo] }))
 
 })
+
+store = devtools(store)
+store = persist(store, { name: "store-settings" })
 
 export const useStore = create(devtools(store))
 

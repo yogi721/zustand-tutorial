@@ -8,6 +8,11 @@ body {
   padding: 1rem;
 }
 
+.dark {
+  background-color: rgb(35, 40, 63);
+  color: rgb(218, 255, 255);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

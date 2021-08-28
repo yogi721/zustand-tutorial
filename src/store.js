@@ -8,7 +8,10 @@ let store = (set) => ({
 
     todos: [],
     addTodo: (todo) =>
-        set((state) => ({ todos: [...state.todos, todo] }))
+        set((state) => ({ todos: [...state.todos, todo] })),
+
+    dark: false,
+    toggleDarkMode: () => set((state) => ({ dark: !state.dark }))
 
 })
 
